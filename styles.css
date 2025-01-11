@@ -103,12 +103,13 @@ body {
 }
 
 .button.secondary {
-  background: #f3f4f6;
+  /* background: #f3f4f6; */
   color: var(--text);
 }
 
 .button.secondary:hover {
-  background: #e5e7eb;
+  /* background: #e5e7eb; */
+  font-weight: 600;
 }
 
 /* Services Section */
@@ -345,7 +346,7 @@ body {
 }
 
 .header {
-  padding: 2rem;
+  padding: 1rem 0;
   background-color: inherit;
   border-bottom: 1px solid var(--border);
   position: absolute;
@@ -358,7 +359,16 @@ body {
 .header a {
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 10vw, 1.5rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta {
+  font-size: 1rem !important;
 }
 
 .logo {
@@ -437,7 +447,7 @@ body {
     radial-gradient(circle at 100% 100%, #7A00FF 0%, transparent 50%),
     radial-gradient(circle at 0% 100%, #FF0080 0%, transparent 50%);
   filter: blur(100px);
-  opacity: 0.15;
+  opacity: 0.25;
   z-index: 0;
   /* animation: gradientMove 20s ease infinite; */
 }
